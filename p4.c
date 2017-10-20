@@ -107,7 +107,8 @@ _Bool Correlate (int size, float arrayOne[], float arrayTwo[], float * spearmanC
    *correlationFlag = -1.0;
     else
     *correlationFlag = 0;
-     if(size>0)
+     
+    if(size>0)
      return 1;
      else
      return 0;
