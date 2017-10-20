@@ -101,9 +101,9 @@ _Bool Correlate (int size, float arrayOne[], float arrayTwo[], float * spearmanC
     }
     *spearmanCoefficient = xxyy / sqrt(xxsqr*yysqr);
 
-    if(*spearmanCoefficient>=0.9 || *spearmanCoefficient<=1.0 )
+    if(*spearmanCoefficient>=0.9 && *spearmanCoefficient<=1 )
     *correlationFlag = 1.0;
-    else if (*spearmanCoefficient>=-0.9 || *spearmanCoefficient<=-1.0 )
+    else if (*spearmanCoefficient>=-1 && *spearmanCoefficient<=-0.9)
    *correlationFlag = -1.0;
     else
     *correlationFlag = 0;
